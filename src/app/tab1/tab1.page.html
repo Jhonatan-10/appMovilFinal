@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Impuestos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Impuestos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-card-subtitle>Hora de pagar Impuestos</ion-card-subtitle>
+      <ion-card-title  class="imp">IMPUESTOS</ion-card-title>
+      
+    </ion-card-header>
+  
+  </ion-card>
+
+    <ion-card>
+
+      <ion-item>
+        <ion-label>Ingrese el Monto a calcular: Bs. </ion-label>
+        <ion-input [(ngModel)]="monto" type="number" value=""></ion-input>
+    
+      </ion-item>
+
+      <ion-button color="dark" (click)="calcularImpuesto()" expand="block" fill="outline">Calcular</ion-button>
+  
+      <ion-card>
+
+        <div *ngIf="IVA" class="monto1">
+          Impuesto al valor Agregado (IVA):Bs. {{ IVA }}
+        </div>
+      </ion-card>
+      <ion-card>
+    
+        <div *ngIf="ITE" class="monto2">
+          Impuesto a la transacciones (IT):
+          Bs. {{ ITE }}
+        </div>
+  
+      </ion-card>
+
+      <ion-card>
+    
+        <div *ngIf="utilidades" class="utilidades">
+          Utilidades:Bs. {{ utilidades }}
+        </div>
+    
+      </ion-card>
+    </ion-card>
+
+</ion-content>
+   
+
+  

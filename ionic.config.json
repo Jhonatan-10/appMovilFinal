@@ -1,0 +1,7 @@
+{
+  "name": "appMoviltrabajo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
